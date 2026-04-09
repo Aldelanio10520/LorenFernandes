@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Loren Fernandes</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Inicialize com sua Public Key
+            emailjs.init("YND0XXXZxA-ozlJg-");
+        })();
+    </script>
+
+    <!--- Define o ícone do site (favicon)-->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/fontawesome.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/responsivo.css" />
+
+
+
+</head>
+
+<body class="no-select">
+
+    <div class="container-mensagens" id="container-mensagens">
+
+    </div>
+
+
+
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-one">
+                    <div class="d-flex text-banner">
+                        <h1 class="wow fadeInLeft">
+                            <b>Sua <b class="color-primary">declaração de </b><b class="color-primary">Imposto de Renda</b> feita com inteligência e estratégia.</b>
+                        </h1>
+                        <p class="wow fadeInLeft delay-02s">
+                            Você sabia que uma declaração bem feita pode ser uma ferramenta de economia? Como contadora e consultora especializada em IRPF, trabalho para que você não pague nem um centavo a mais do que o necessário. Analiso minuciosamente sua variação patrimonial, investimentos e despesas dedutíveis, entregando uma consultoria que une precisão técnica e agilidade. Meu objetivo é oferecer segurança jurídica e eficiência financeira, garantindo que sua prestação de contas seja impecável e vantajosa.
+                        </p>
+                        <div class="wow fadeIn delay-05s">
+                            <a class="btn btn-sm btn-white btn-social mt-4 mr-3"
+                                href="https://www.instagram.com/lorenf.contadora" target="_blank">
+                                <i class="fab fa-instagram social-icon"
+                                    data-tooltip="instagram - Loren Fernandes"></i>
+                            </a>
+                            
+                            <a class="btn btn-sm btn-white btn-social mt-4 botao-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp social-icon"
+                                    data-tooltip="Chame no Whatsapp.."></i>
+                            </a>
+                           
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-6 no-mobile">
+                    <div class="d-flex img-banner wow fadeIn delay-03s">
+                        <img src="./img/FotoPerfil.jpeg" alt="">
+                    </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="cardapio" id="cardapio">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-one text-center mb-12 wow fadeIn">
+                    <span class="hint-title"><b>Dados Pessoais</b></span>
+                    <h1 class="title">
+                        <b>Informações Básicas</b>
+                    </h1>
+                </div>   
+                <div class="col-12 col-lg-5 col-md-5 col-sm-12">
+                    <div class="form-group">
+                        <label for="txtNome">Seu Nome:</label>
+                        <input id="txtNome" name="Nome" type="text" class="form-control" form="meuFormulario"
+                            onkeyup="cardapio.metodos.titleize(this)">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="form-group container-cep">
+                            <label>Telefone (Whatsapp):</label>
+                                <input class="form-control" name="Telefone" onkeyup="cardapio.metodos.mascaraTelefone(event)" 
+                                maxlength="15" placeholder="(00) 00000-0000" form="meuFormulario" id="Telefone">
+                                
+                                    
+                            
+                    </div>
+                    
+                </div>
+                
+                <div class="col-12 col-lg-3 col-md-3 col-sm-12">
+                    <div class="form-group container-cep">
+                            <label>CEP:</label>
+                                <input class="form-control" name="CEP" onkeyup="cardapio.metodos.mascaraCep(event)" type="text" id="cep" placeholder="00000-000" maxlength="9"  form="meuFormulario">
+                                <button class="btn btn-purple btn-sm" onclick="buscarCep()">
+                                    <i class="fa fa-search"></i> </button>
+                            
+                    </div>
+                    
+                </div>
+
+
+                
+
+
+
+
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="rua">Endereço:</label>
+                            <input id="rua" name="Rua" type="text" class="form-control"  form="meuFormulario">
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-lg-2 col-md-2 col-sm-12">
+                        <div class="form-group">
+                            <label for="txtNumero">Número:</label>
+                            <input id="txtNumero" name="Numero" type="text" class="form-control"  form="meuFormulario">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group">
+                            <label for="bairro">Bairro:</label>
+                            <input id="bairro" name="Bairro" type="text" class="form-control" form="meuFormulario">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                            <label for="cidade">Cidade:</label>
+                            <input id="cidade" name="Cidade" type="text" class="form-control" form="meuFormulario">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-2 col-md-2 col-sm-12">
+                        <div class="form-group">
+                            <label for="uf">UF:</label>
+                            <input id="uf" name="UF" type="text" class="form-control" form="meuFormulario">
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input id="email" name="Email" type="text" class="form-control" form="meuFormulario">
+                        </div>
+                    </div>
+
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-one text-center mb-12 wow fadeIn">
+                    <span class="hint-title"><b>Dados Obrigatórios</b></span>
+                    <h1 class="title">
+                        <b>Documentos</b>
+                    </h1>
+                </div>   
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="form-group">
+                        <label for="txtRG">RG:</label>
+                        <input id="txtRG" name="RG" type="number" class="form-control" form="meuFormulario"
+                            onkeyup="cardapio.metodos.titleize(this)">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="form-group container-cep">
+                        <label for="txtCPF">CPF:</label>
+                        <input type="text" form="meuFormulario" name="CPF" class="form-control" oninput="cardapio.metodos.mascaraCpf(event)" maxlength="14" placeholder="000.000.000-00">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group">
+                            <label for="txtdtNascimento">Data de Nascimento:</label>
+                            <input id="txtdtNascimento" name="Data_Nascimento" type="date" class="form-control" form="meuFormulario">
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                        <div class="form-group">
+                            <label for="txtTituloEleitor">Titulo de Eleitor:</label>
+                            <input id="txtTituloEleitor" name="Titulo_Eleitor" type="number" class="form-control" form="meuFormulario">
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-lg-4 col-md-2 col-sm-12">
+                        <div class="form-group">
+                            <label for="txtProfissao">Profissão Atual:</label>
+                            <input id="txtProfissao" name="Profissao" type="text" class="form-control" form="meuFormulario">
+                        </div>
+                    </div>
+
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="form-group">
+                            <label for="txtTituloEleitor">Quantidade de Dependentes:</label>
+                        <select id="ddlQtdeDependentes" name="Quantidade_Dependentes" class="form-control" form="meuFormulario">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+            </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-12 col-one text-center mb-12 wow fadeIn">
+                    <span class="hint-title"><b>Anexos</b></span>
+                    <h1 class="title">
+                        <b>Renda e Bens</b>
+                    </h1>
+                </div>   
+                
+                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
+                    <label for="txtAnexoRG">RG:</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="drop-zone" id="drop-zone">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <input type="file" id="fileRG" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
+                    <label for="txtAnexoCPF">CPF:</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="drop-zone" id="drop-zone">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <input type="file" id="fileCPF" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
+                    <label for="txtAnexoComprovanteResidencia">Comprovante de Residência:</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="drop-zone" id="drop-zone">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <input type="file" id="fileComprovanteResidencia" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
+                    <label for="txtDeclaracaoAnoAnterior">Declaração do Ano Anterior:</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="drop-zone" id="drop-zone">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <input type="file" id="fileDeclaracaoAnoAnterior" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
+                    <label for="txtInformeRendimentos">Informes de Rendimentos:</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="drop-zone" id="drop-zone">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <input type="file" id="fileInformeRendimentos" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
+                    <label for="txtRenavam">Renavam:</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="drop-zone" id="drop-zone">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <input type="file" id="fileRenavam" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
+                    <label for="txtIPTU">IPTU:</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="drop-zone" id="drop-zone">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <input type="file" id="fileIPTU" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
+                    <label for="txtExtratoFinanciamentos">Extratos de Financiamentos:</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="drop-zone" id="drop-zone">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <input type="file" id="fileExtratoFinanciamentos" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+
+Recibos de saúd-->
+            </div>
+            <div class="row">
+
+                <div class="col-12 col-one text-center mb-12 wow fadeIn">
+                    <span class="hint-title"><b>Deduções</b></span>
+                    <h1 class="title">
+                        <b>Reduzir o Imposto</b>
+                    </h1>
+                </div>   
+                
+                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
+                    <label for="txtSaude">Recibos de Saúde:</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="drop-zone" id="drop-zone">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <input type="file" id="fileSaude" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
+                    <label for="txtEducacao">Recibos de Educação:</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="drop-zone" id="drop-zone">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <input type="file" id="fileEducacao" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
+                    <label for="txtAnexoCPFDependentes">CPF de Todos os Dependentes:</label>
+                    <div class="form-group">
+                        <div class="form-group">
+                            <div class="drop-zone" id="drop-zone">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        </div>
+                        <input type="file" id="fileCPFDependentes" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                    </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+
+Recibos de saúd-->
+            </div>
+            <div class="row">
+
+                <div class="col-12 col-one text-center mb-12 wow fadeIn">
+                    <span class="hint-title"><b>Financeiro</b></span>
+                    <h1 class="title">
+                        <b>Restituição ou Pagamento</b>
+                    </h1>
+                </div>   
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="form-group">
+                        <label for="txtPix">Seu Pix:</label>
+                        <input id="txtPix" type="text" class="form-control" form="meuFormulario"
+                            onkeyup="cardapio.metodos.titleize(this)">
+                    </div>
+                </div>
+                <!--- Restituição: Dados bancários ou informe se prefere via PIX (chave CPF) para ter prioridade;
+- Imposto a Pagar: Informe se deseja pagar em cota única ou parcelado (com opção de débito automático).-->
+            </div>
+
+         
+                
+         
+
+        
+    <form id="meuFormulario">
+    <div class="form-footer">
+            <button id="botao-enviar" type="submit" class="btn-finalizar" >
+                Finalizar e Enviar Minha Declaração
+            </button>
+        </div>
+    </form>
+
+    <!--Resumo do Formulário-->
+
+    <div id="resumoSaida" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; display: none;">
+    <h3>Resumo do Preenchimento</h3>
+    <div id="conteudoResumo"></div>
+    </div>
+
+    <script>
+
+        const formulario = document.getElementById('meuFormulario');
+        const resumoContainer = document.getElementById('resumoSaida');
+        const conteudoResumo = document.getElementById('conteudoResumo');
+
+        
+        formulario.addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o recarregamento da página
+
+        // Captura os dados de forma dinâmica
+        const dados = new FormData(formulario);
+        let htmlResumo = '<ul>';
+
+        dados.forEach((valor, chave) => {
+            // Transforma a chave (name) em um rótulo mais bonito
+            const label = chave.charAt(0).toUpperCase() + chave.slice(1);
+            htmlResumo += `<li><strong>${label}:</strong> ${valor}</li>`;
+        });
+
+        htmlResumo += '</ul>';
+
+        // Exibe o resumo na tela
+        conteudoResumo.innerHTML = htmlResumo;
+        resumoContainer.style.display = 'block';
+
+        });
+
+    </script>
+
+
+    <script>
+
+        const btn = document.getElementById('meuFormulario');
+
+        btn.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Altera o texto do botão para dar feedback ao usuário
+            const submitBtn = this.querySelector('button');
+            submitBtn.innerText = 'Enviando...';
+
+            // serviceID, templateID, templateParams (ou o elemento do form)
+            emailjs.sendForm('service_3h4jygt', 'template_dfuhyzi', this)
+                .then(function() {
+                    alert('E-mail enviado com sucesso!');
+                    submitBtn.innerText = 'Enviar Email';
+                    btn.reset(); // Limpa o formulário
+                }, function(error) {
+                    alert('Falha ao enviar... ' + JSON.stringify(error));
+                    submitBtn.innerText = 'Tentar novamente';
+                });
+        });
+    </script>
+
+
+
+
+
+        </div>
+
+    </section>
+
+<!--    <section class="sobre col-one wow fadeInUp delay-05s" id="sobre">
+        <div class="container">
+            <div class="row">
+                <div class="col-5 no-mobile text-center">
+                    <div class="card-sobre"></div>
+                    <div class="d-flex img-banner">
+                        <img class="img-sobre" src="./img/acai-sobre.webp" alt="">
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-7">
+
+
+                    <div class="text-center">
+                        <span class="hint-title"><b>Sobre Nós</b></span>
+                        <h1 class="title">
+                            <b>Quem somos?</b>
+                        </h1>
+                    </div>
+                    <div class="mb-5">
+                        <p class="paragrafo-sobre">Somos uma acaiteria apaixonada por proporcionar a você a melhor
+                            experiência com açaí. Fundada em 2021, estamos comprometidos em oferecer produtos de alta
+                            qualidade e sabores incríveis para nossos clientes.</p>
+
+                        <p class="paragrafo-sobre">Nosso compromisso com ingredientes frescos e um ambiente acolhedor,
+                            torna a compra em Açaí D' Campos uma experiência memorável.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-12 col-lg-6 col-md-3 col-sm-12 container-texto-footer">
+                    <p class="mb-0">
+                        <b>Contadora</b> Loren Fernandes
+                    </p>
+                </div>
+
+                <div class="col-12 col-lg-3 col-md-3 col-sm-12 container-redes-footer wow zoomIn">
+                    <a class="btn btn-sm btn-white btn-social mr-3" href="https://www.instagram.com/lorenf.contadora"
+                        target="_blank">
+                        <i class="fab fa-instagram social-icon" data-tooltip="instagram - Loren Fernandes"></i>
+                    </a>
+                    
+                    <a class="btn btn-sm btn-white btn-social botao-whatsapp" href="#" target="_blank">
+                        <i class="fab fa-whatsapp social-icon"
+                            data-tooltip="Chame no Whatsapp.."></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
+    </div>
+
+
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/modernizr-3.5.0.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/wow.min.js"></script>
+    <script type="text/javascript" src="./js/dados.js" id="dados"></script>
+    <script type="text/javascript" src="./js/app.js" id="appId"></script>
+
+    <script>new WOW().init();</script>
+    <script>
+        const dropZone = document.getElementById('drop-zone');
+        const fileInput = document.getElementById('file-input');
+        const fileInputRH = document.getElementById('fileRG');
+
+        // 1. Ao clicar na div, abre a janela de arquivos
+        dropZone.addEventListener('click', () => {
+        fileInput.click();
+        });
+
+        // 2. Quando o usuário selecionar o arquivo, você pode tratar aqui
+        fileInput.addEventListener('change', () => {
+        if (fileInput.files.length > 0) {
+            const fileName = fileInput.files[0].name;
+            alert('Arquivo selecionado: ' + fileName);
+            // Aqui você enviaria o arquivo para o seu backend ou processaria os dados
+        }
+        });
+    </script>
+
+    <script>
+        function buscarCep() {
+            let cep = document.getElementById('cep').value.replace(/\D/g, '');
+
+            if (cep !== "" && cep.length === 8) {
+                // URL da API ViaCEP
+                let url = `https://viacep.com.br/ws/${cep}/json/`;
+
+                fetch(url)
+                    .then(response => response.json())
+                    .then(dados => {
+                        if (!("erro" in dados)) {
+                            // Preenche os campos com os valores retornados
+                            document.getElementById('rua').value = dados.logradouro;
+                            document.getElementById('bairro').value = dados.bairro;
+                            document.getElementById('cidade').value = dados.localidade;
+                            document.getElementById('uf').value = dados.uf;
+                        } else {
+                            alert("CEP não encontrado.");
+                        }
+                    })
+                    .catch(error => alert("Erro ao buscar o CEP."));
+            } else {
+                alert("Formato de CEP inválido.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
