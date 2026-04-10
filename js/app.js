@@ -973,6 +973,31 @@ cardapio.metodos = {
     }
 },
 
+
+listarArquivos: (event) => {
+    const lista = document.getElementById('lista-arquivos');
+    const arquivos = event.target.files;
+
+    // Percorre todos os arquivos selecionados
+    for (let i = 0; i < arquivos.length; i++) {
+        const arquivo = arquivos[i];
+
+        // Cria o item da lista
+        const li = document.createElement('li');
+        li.className = 'file-item';
+        
+        // Adiciona o nome do arquivo e um ícone de "remover"
+        li.innerHTML = `
+            <span class="file-name">📄 ${arquivo.name}</span>
+            <button class="btn-remove" onclick="this.parentElement.remove()">
+                <i class="fas fa-times"></i> x
+            </button>
+        `;
+
+        lista.appendChild(li);
+    }
+},
+
 	// validação antes de prosseguir para etapa 3
 	resumoPedido: () => {
 		let nome = $('#txtNome').val().trim();

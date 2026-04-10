@@ -70,10 +70,10 @@
                     </div>
 
 
+                </div>
+
             </div>
-
         </div>
-
     </section>
 
     <section class="cardapio" id="cardapio">
@@ -98,76 +98,55 @@
                             <label>Telefone (Whatsapp):</label>
                                 <input class="form-control" name="Telefone" onkeyup="cardapio.metodos.mascaraTelefone(event)" 
                                 maxlength="15" placeholder="(00) 00000-0000" form="meuFormulario" id="Telefone">
-                                
-                                    
-                            
-                    </div>
-                    
-                </div>
-                
+                    </div>                    
+                </div>                
                 <div class="col-12 col-lg-3 col-md-3 col-sm-12">
                     <div class="form-group container-cep">
                             <label>CEP:</label>
                                 <input class="form-control" name="CEP" onkeyup="cardapio.metodos.mascaraCep(event)" type="text" id="cep" placeholder="00000-000" maxlength="9"  form="meuFormulario">
                                 <button class="btn btn-purple btn-sm" onclick="buscarCep()">
-                                    <i class="fa fa-search"></i> </button>
-                            
-                    </div>
-                    
+                                    <i class="fa fa-search"></i> </button>                            
+                    </div>                    
                 </div>
-
-
-                
-
-
-
-
                 <div class="col-12 col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label for="rua">Endereço:</label>
-                            <input id="rua" name="Rua" type="text" class="form-control"  form="meuFormulario">
-                        </div>
+                    <div class="form-group">
+                        <label for="rua">Endereço:</label>
+                        <input id="rua" name="Rua" type="text" class="form-control"  form="meuFormulario">
                     </div>
-                    
-                    <div class="col-12 col-lg-2 col-md-2 col-sm-12">
-                        <div class="form-group">
-                            <label for="txtNumero">Número:</label>
-                            <input id="txtNumero" name="Numero" type="text" class="form-control"  form="meuFormulario">
-                        </div>
+                </div>                    
+                <div class="col-12 col-lg-2 col-md-2 col-sm-12">
+                    <div class="form-group">
+                        <label for="txtNumero">Número:</label>
+                        <input id="txtNumero" name="Numero" type="text" class="form-control"  form="meuFormulario">
                     </div>
-
-                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
-                        <div class="form-group">
-                            <label for="bairro">Bairro:</label>
-                            <input id="bairro" name="Bairro" type="text" class="form-control" form="meuFormulario">
-                        </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="form-group">
+                        <label for="bairro">Bairro:</label>
+                        <input id="bairro" name="Bairro" type="text" class="form-control" form="meuFormulario">
                     </div>
-
-                    <div class="col-12 col-lg-6 col-md-6 col-sm-12">
-                        <div class="form-group">
-                            <label for="cidade">Cidade:</label>
-                            <input id="cidade" name="Cidade" type="text" class="form-control" form="meuFormulario">
-                        </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12">
+                    <div class="form-group">
+                        <label for="cidade">Cidade:</label>
+                        <input id="cidade" name="Cidade" type="text" class="form-control" form="meuFormulario">
                     </div>
-                    <div class="col-12 col-lg-2 col-md-2 col-sm-12">
-                        <div class="form-group">
-                            <label for="uf">UF:</label>
-                            <input id="uf" name="UF" type="text" class="form-control" form="meuFormulario">
-                        </div>
+                </div>
+                <div class="col-12 col-lg-2 col-md-2 col-sm-12">
+                    <div class="form-group">
+                        <label for="uf">UF:</label>
+                        <input id="uf" name="UF" type="text" class="form-control" form="meuFormulario">
                     </div>
-                    
-                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input id="email" name="Email" type="text" class="form-control" form="meuFormulario">
-                        </div>
+                </div>                    
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input id="email" name="Email" type="text" class="form-control" form="meuFormulario">
                     </div>
-
-
+                </div>
             </div>
 
             <div class="row">
-
                 <div class="col-12 col-one text-center mb-12 wow fadeIn">
                     <span class="hint-title"><b>Dados Obrigatórios</b></span>
                     <h1 class="title">
@@ -188,26 +167,23 @@
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 col-md-4 col-sm-12">
-                        <div class="form-group">
-                            <label for="txtdtNascimento">Data de Nascimento:</label>
-                            <input id="txtdtNascimento" name="Data_Nascimento" type="date" class="form-control" form="meuFormulario">
-                        </div>
+                    <div class="form-group">
+                        <label for="txtdtNascimento">Data de Nascimento:</label>
+                        <input id="txtdtNascimento" name="Data_Nascimento" type="date" class="form-control" form="meuFormulario">
                     </div>
-
-                    <div class="col-12 col-lg-4 col-md-4 col-sm-12">
-                        <div class="form-group">
-                            <label for="txtTituloEleitor">Titulo de Eleitor:</label>
-                            <input id="txtTituloEleitor" name="Titulo_Eleitor" type="number" class="form-control" form="meuFormulario">
-                        </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12">
+                    <div class="form-group">
+                        <label for="txtTituloEleitor">Titulo de Eleitor:</label>
+                        <input id="txtTituloEleitor" name="Titulo_Eleitor" type="number" class="form-control" form="meuFormulario">
                     </div>
-                    
-                    <div class="col-12 col-lg-4 col-md-2 col-sm-12">
-                        <div class="form-group">
-                            <label for="txtProfissao">Profissão Atual:</label>
-                            <input id="txtProfissao" name="Profissao" type="text" class="form-control" form="meuFormulario">
-                        </div>
+                </div>                    
+                <div class="col-12 col-lg-4 col-md-2 col-sm-12">
+                    <div class="form-group">
+                        <label for="txtProfissao">Profissão Atual:</label>
+                        <input id="txtProfissao" name="Profissao" type="text" class="form-control" form="meuFormulario">
                     </div>
-
+                </div>
                 <div class="col-12 col-lg-4 col-md-4 col-sm-12">
                     <div class="form-group">
                             <label for="txtTituloEleitor">Quantidade de Dependentes:</label>
@@ -225,179 +201,29 @@
                             <option value="10">10</option>
                         </select>
                     </div>
-            </div>
-
+                </div>
             </div>
 
             <div class="row">
-
                 <div class="col-12 col-one text-center mb-12 wow fadeIn">
                     <span class="hint-title"><b>Anexos</b></span>
                     <h1 class="title">
                         <b>Renda e Bens</b>
                     </h1>
-                </div>   
-                
+                </div>                   
                 <div class="col-12 col-lg-3 col-md-2 col-sm-12">
-                    <label for="txtAnexoRG">RG:</label>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="drop-zone" id="drop-zone">
+                    <label>CPF</label>                    
+                    <div id="drop-area" onclick="document.getElementById('fileInput').click()">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
                         </div>
-                        <input type="file" id="fileRG" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
+                        <input type="file" id="fileInput" form="meuFormulario" name="anexo_cpf" multiple hidden>
                     </div>
-                        </div>
-                    </div>
+                    <ul id="file-list"></ul>
                 </div>
-                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
-                    <label for="txtAnexoCPF">CPF:</label>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="drop-zone" id="drop-zone">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        </div>
-                        <input type="file" id="fileCPF" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
-                    </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
-                    <label for="txtAnexoComprovanteResidencia">Comprovante de Residência:</label>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="drop-zone" id="drop-zone">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        </div>
-                        <input type="file" id="fileComprovanteResidencia" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
-                    </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
-                    <label for="txtDeclaracaoAnoAnterior">Declaração do Ano Anterior:</label>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="drop-zone" id="drop-zone">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        </div>
-                        <input type="file" id="fileDeclaracaoAnoAnterior" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
-                    </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
-                    <label for="txtInformeRendimentos">Informes de Rendimentos:</label>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="drop-zone" id="drop-zone">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        </div>
-                        <input type="file" id="fileInformeRendimentos" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
-                    </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
-                    <label for="txtRenavam">Renavam:</label>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="drop-zone" id="drop-zone">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        </div>
-                        <input type="file" id="fileRenavam" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
-                    </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
-                    <label for="txtIPTU">IPTU:</label>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="drop-zone" id="drop-zone">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        </div>
-                        <input type="file" id="fileIPTU" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
-                    </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
-                    <label for="txtExtratoFinanciamentos">Extratos de Financiamentos:</label>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="drop-zone" id="drop-zone">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        </div>
-                        <input type="file" id="fileExtratoFinanciamentos" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
-                    </div>
-                        </div>
-                    </div>
-                </div>
-                <!--
 
-Recibos de saúd-->
             </div>
-            <div class="row">
-
-                <div class="col-12 col-one text-center mb-12 wow fadeIn">
-                    <span class="hint-title"><b>Deduções</b></span>
-                    <h1 class="title">
-                        <b>Reduzir o Imposto</b>
-                    </h1>
-                </div>   
-                
-                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
-                    <label for="txtSaude">Recibos de Saúde:</label>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="drop-zone" id="drop-zone">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        </div>
-                        <input type="file" id="fileSaude" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
-                    </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
-                    <label for="txtEducacao">Recibos de Educação:</label>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="drop-zone" id="drop-zone">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        </div>
-                        <input type="file" id="fileEducacao" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
-                    </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 col-md-2 col-sm-12">
-                    <label for="txtAnexoCPFDependentes">CPF de Todos os Dependentes:</label>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div class="drop-zone" id="drop-zone">
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8e9aaf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                        </div>
-                        <input type="file" id="fileCPFDependentes" hidden multiple accept=".pdf,.jpg,.png" form="meuFormulario">
-                    </div>
-                        </div>
-                    </div>
-                </div>
-                <!--
-
-Recibos de saúd-->
-            </div>
+            
             <div class="row">
 
                 <div class="col-12 col-one text-center mb-12 wow fadeIn">
@@ -436,6 +262,75 @@ Recibos de saúd-->
     <h3>Resumo do Preenchimento</h3>
     <div id="conteudoResumo"></div>
     </div>
+
+
+
+    
+
+    
+    <script>
+        const formulario = document.getElementById('meuFormulario');
+const resumoContainer = document.getElementById('resumoSaida');
+const conteudoResumo = document.getElementById('conteudoResumo');
+
+formulario.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const dados = new FormData(formulario);
+    let htmlResumo = '<ul>';
+    
+    // Captura o input de arquivo corretamente pelo ID
+    const fileInput = document.getElementById('fileInput'); 
+    const arquivo = fileInput.files[0];
+
+    // Gerar resumo visual
+    dados.forEach((valor, chave) => {
+        const label = chave.charAt(0).toUpperCase() + chave.slice(1);
+        if (valor instanceof File) {
+            htmlResumo += `<li><strong>${label}:</strong> ${valor.name || 'Nenhum arquivo'}</li>`;
+        } else {
+            htmlResumo += `<li><strong>${label}:</strong> ${valor}</li>`;
+        }
+    });
+    htmlResumo += '</ul>';
+    conteudoResumo.innerHTML = htmlResumo;
+    resumoContainer.style.display = 'block';
+
+    // Lógica de envio com EmailJS
+    if (arquivo) {
+        const leitor = new FileReader();
+        leitor.readAsDataURL(arquivo);
+        leitor.onload = function() {
+            // Extrai apenas a string base64 pura
+            const base64Str = leitor.result.split(',')[1];
+            
+            enviarEmail(base64Str, arquivo.name);
+        };
+    } else {
+        enviarEmail(null, null);
+    }
+});
+
+function enviarEmail(base64Content, fileName) {
+    // Parâmetros que devem coincidir com as variáveis {{}} do seu template
+    const params = {
+        from_name: document.getElementsByName('anexo_cpf')[0]?.value || "Usuário",
+        anexo_cpf: base64Content, // Variável que você configurou no painel EmailJS
+        content_type: "application/pdf", // Ajuste conforme o tipo de arquivo esperado
+        file_name: fileName
+    };
+
+    emailjs.send('service_3h4jygt', 'template_dfuhyzi', params)
+        .then((response) => {
+            console.log('Sucesso!', response.status, response.text);
+            alert('Email enviado com sucesso!');
+        }, (error) => {
+            console.error('Falha no envio...', error);
+            alert('Erro ao enviar email.');
+        });
+}
+    </script>
+
 
     <script>
 
@@ -589,6 +484,7 @@ Recibos de saúd-->
         }
         });
     </script>
+    
 
     <script>
         function buscarCep() {
@@ -616,6 +512,34 @@ Recibos de saúd-->
                 alert("Formato de CEP inválido.");
             }
         }
+    </script>
+    <script>
+        const fileInputs = document.getElementById('fileInput');
+        const fileList = document.getElementById('file-list');
+
+        fileInputs.addEventListener('change', function() {
+            // Transforma a FileList em array para facilitar a manipulação
+            const files = Array.from(this.files);
+
+            files.forEach(file => {
+                // Criar o item da lista (li)
+                const listItem = document.createElement('li');
+                
+                listItem.innerHTML = `
+                    <span>📄 ${file.name}</span>
+                    <button class="btn-remove" title="Remover arquivo">&times;</button>
+                `;
+                
+                // Adiciona o evento de clique no botão de excluir
+                listItem.querySelector('.btn-remove').addEventListener('click', () => {
+                    listItem.remove();
+                    // Dica: Se precisar limpar o input para permitir reenviar o mesmo arquivo:
+                    // fileInput.value = ""; 
+                });
+
+                fileList.appendChild(listItem);
+            });
+        });
     </script>
 
 </body>
