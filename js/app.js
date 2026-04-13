@@ -1,5 +1,7 @@
 const CELULAR_EMPRESA = '558587508992';
 
+const LOJA_ABRE = 0;
+const LOJA_FECHA = 22;
 
 // Inicializa  proximoIdCarrinho com valor salvo no navegador ou o valor 1
 let proximoIdCarrinho = 1;
@@ -1365,7 +1367,39 @@ listarArquivos: (event) => {
 		return horaDecimal;
 	},
 
+	lojaAbertaOuFechada: () => {
+		let hora = cardapio.metodos.obterHoraDecimal();
+		let dia = new Date().getDay();
 
+		$('#container-mensagens').html('');
+
+		if (hora < LOJA_ABRE || hora >= LOJA_FECHA || dia == 1 || dia == 2) {
+			cardapio.metodos.mensagem(
+				`Loja Fechada`,
+				(cor = 'red'),
+				(tempo = 10 * 60 * 1000),
+			);
+			cardapio.metodos.mensagem(
+				`Abrimos (Qua à Dom) às ${LOJA_ABRE.toFixed(2).replace('.', ':')} hrs.`,
+				(cor = 'red'),
+				(tempo = 15000),
+			);
+
+			if (hora >= LOJA_ABRE - 1 && hora <= LOJA_ABRE && dia != 1) {
+				cardapio.metodos.mensagem(
+					`Agende seu pedido`,
+					(cor = 'green'),
+					(tempo = 20000),
+				);
+			}
+		} //else {
+			//cardapio.metodos.mensagem(
+			//	'',
+			//	(cor = 'green'),
+			//	(tempo = 6000),
+			//);
+		//}
+	},
 };
 
 cardapio.templates = {
