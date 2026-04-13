@@ -262,75 +262,9 @@
     <h3>Resumo do Preenchimento</h3>
     <div id="conteudoResumo"></div>
     </div>
-
-
-
-    
+  
 
     
-    <script>
-        const formulario = document.getElementById('meuFormulario');
-        const resumoContainer = document.getElementById('resumoSaida');
-        const conteudoResumo = document.getElementById('conteudoResumo');
-
-        formulario.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const dados = new FormData(formulario);
-        let htmlResumo = '<ul>';
-        
-        // Captura o input de arquivo corretamente pelo ID
-        const fileInput = document.getElementById('fileInput'); 
-        const arquivo = fileInput.files[0];
-
-        // Gerar resumo visual
-        dados.forEach((valor, chave) => {
-            const label = chave.charAt(0).toUpperCase() + chave.slice(1);
-            if (valor instanceof File) {
-                htmlResumo += `<li><strong>${label}:</strong> ${valor.name || 'Nenhum arquivo'}</li>`;
-            } else {
-                htmlResumo += `<li><strong>${label}:</strong> ${valor}</li>`;
-            }
-        });
-        htmlResumo += '</ul>';
-        conteudoResumo.innerHTML = htmlResumo;
-        resumoContainer.style.display = 'block';
-
-        // Lógica de envio com EmailJS
-        if (arquivo) {
-            const leitor = new FileReader();
-            leitor.readAsDataURL(arquivo);
-            leitor.onload = function() {
-                // Extrai apenas a string base64 pura
-                const base64Str = leitor.result.split(',')[1];
-                
-                enviarEmail(base64Str, arquivo.name);
-            };
-        } else {
-            enviarEmail(null, null);
-        }
-});
-
-function enviarEmail(base64Content, fileName) {
-    // Parâmetros que devem coincidir com as variáveis {{}} do seu template
-    const params = {
-        from_name: document.getElementsByName('anexo_cpf')[0]?.value || "Usuário",
-        anexo_cpf: base64Content, // Variável que você configurou no painel EmailJS
-        content_type: "application/pdf", // Ajuste conforme o tipo de arquivo esperado
-        file_name: fileName
-    };
-
-    emailjs.send('service_3h4jygt', 'template_dfuhyzi', params)
-        .then((response) => {
-            console.log('Sucesso!', response.status, response.text);
-            alert('Email enviado com sucesso!');
-        }, (error) => {
-            console.error('Falha no envio...', error);
-            alert('Erro ao enviar email.');
-        });
-}
-    </script>
-
 <!--
     <script>
 
